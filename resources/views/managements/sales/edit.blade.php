@@ -11,7 +11,7 @@
             </div>
     </x-slot>
     <div class="container">
-        <form id="add-sale" action="{{route('sales.update'),$sales->id}}" method="post">
+        <form id="add-sale" action="{{ route('sales.edit',$sale->id) }}" method="post">
             @csrf
             @method("PUT")
             <div class="row justify-content-center">
@@ -202,6 +202,7 @@
                                     </option>
                                 </select>
                             </div>
+                            <div class="espace"></br></div>
                             <div class="form-group">
                                 <button
                                     onclick="event.preventDefault();

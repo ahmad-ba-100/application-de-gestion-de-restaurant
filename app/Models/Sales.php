@@ -21,7 +21,7 @@ class Sales extends Model
     }
     public function serveurs()
     {
-        return $this->belongsTo(Serveurs::class,'servant_id');
+        return $this->belongsTo(Servants::class,'servant_id');
     }
 
 

@@ -87,7 +87,7 @@
                                                                 
                                                                 <h5 class="font-weight-bold mt-2">
                                                                     <span class="bg-danger">
-                                                                        Serveur : {{ $sale->servant['nom'] }}
+                                                                        Serveur : {{ $sale->serveurs->nom }}
                                                                     </span>
                                                                 </h5>
                                                                 <h5 class="font-weight-bold mt-2">
@@ -132,12 +132,15 @@
                                                                         Restaurant Jaune
                                                                     </span>
                                                                     <span>
-                                                                        25,Rue Riad El Oulfa
+                                                                       CASABLANCA
                                                                     </span>
                                                                     <span>
-                                                                        0761863643
+                                                                       0620926929
                                                                     </span>
                                                                 </div>
+                                                               
+                                                            
+                                                               
                                                             </div>
                                                         </div>
                                                     </div>
@@ -155,6 +158,8 @@
                                                 @endif
                                             @endforeach
 
+                                           
+
                                         </div>
                                     </div>
                                 @endforeach
@@ -170,7 +175,7 @@
                         @foreach ($categories as $category)
                         <li class="nav-item">
                                 <a href="#{{ $category->slug }}"
-                                    class="nav-link mr-1 {{ $category->slug === 'salades-africaines' ? 'active' : '' }}"
+                                    class="nav-link mr-1   {{ $category->slug === "petit-dejeuner" ?  " show active" : '' }}"
                                     id="{{ $category->slug }}-tab"
                                     data-toggle="pill"
                                     role="tab"
@@ -231,7 +236,7 @@
                                     </option>
                                     @foreach ($serveurs as $servant)
                                         <option value="{{ $servant->id }}">
-                                            {{ $servant['nom'] }}
+                                       {{ $servant->nom}}
                                         </option>
                                     @endforeach
                                 </select>

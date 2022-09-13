@@ -19,11 +19,14 @@ class PaiementController extends Controller
     }
 
     public function index()
-    {
+    
+    {    
          return view('paiement.index')->with([
+            
             "tables"=>Table::all(),
             "categories"=>Category::all(),
             "serveurs"=>Servants::all()
-        ]);
+        ]
+    );
     }
 }

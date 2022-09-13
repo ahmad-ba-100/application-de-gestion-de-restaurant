@@ -70,7 +70,7 @@ class SalesController extends Controller
         $sale->menus() ->sync($request->menu_id);
        //redirect user
        return redirect()->back()->with([
-        "success" => "Paiement modifié avec succés"
+        "success" => "Paiement éffectué avec succés"
     ]);
         
        
@@ -137,7 +137,7 @@ class SalesController extends Controller
         $sales->servant_id = $request->servant_id;
         $sales->quantite = $request->quantite;
         $sales->prix_total = $request->prix_total;
-        $sales->total_recçu = $request->total_reçu;
+        $sales->total_reçu = $request->total_reçu;
         $sales->reste = $request->reste;
         $sales->status_payment = $request->status_payment;
         $sales->type_paiement = $request->type_paiement;

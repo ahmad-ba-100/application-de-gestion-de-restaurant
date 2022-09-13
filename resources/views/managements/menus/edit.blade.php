@@ -98,7 +98,7 @@
                                         <select name="category_id" id="category_id" class="form-control">
                                             <option value="" selected disabled>Choisir une catégorie</option>
                                             @foreach ($categories as $category)
-                                                <option {{ $category['id'] === $menu->category['id'] ? "selected" : ""}} value="{{ $category['id'] }}">
+                                                <option {{ $category['id'] === $menu->category['category_id'] ? "selected" : ""}} value="{{ $category['id'] }}">
                                                     {{ $category['titre'] }}
                                                 </option>
                                             @endforeach

@@ -98,7 +98,7 @@ class MenuController extends Controller
      * @param  \App\Models\Menu  $menu
      * @return \Illuminate\Http\Response
      */
-    public function edit(Menu $menu,$id)
+    public function edit( $id)
     {
         //
         return view("managements.menus.edit")->with([
